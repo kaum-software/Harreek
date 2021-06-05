@@ -1,11 +1,12 @@
 <?php
 
-namespace Kaum\Harreek;
+namespace Kaum\Harreek\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Kaum\Harreek\Skeleton\SkeletonClass
+ * Class HarreekFacade
+ * @package Kaum\Harreek\Facade
  */
 class HarreekFacade extends Facade
 {
@@ -14,7 +15,7 @@ class HarreekFacade extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'harreek';
     }
