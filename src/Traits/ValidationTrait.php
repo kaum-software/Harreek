@@ -1,8 +1,6 @@
 <?php
 namespace Kaum\Harreek\Traits;
 
-use Illuminate\Support\Facades\DB;
-
 trait ValidationTrait
 {
     public function rules(): void {
