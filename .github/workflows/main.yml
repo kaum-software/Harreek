@@ -42,7 +42,7 @@ jobs:
                   composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
                   composer update --${{ matrix.stability }} --prefer-dist --no-interaction
             - name: Execute tests
-              run: vendor/bin/phpunit tests --coverage-clover=coverage.xml"
+              run: "vendor/bin/phpunit tests --coverage-clover=coverage.xml"
             - name: "Send code coverage report to Codecov.io"
               env:
                 CODECOV_TOKEN: "${{ secrets.CODECOV_TOKEN }}"
