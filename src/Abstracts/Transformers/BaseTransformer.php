@@ -1,11 +1,11 @@
 <?php
 
-use Illuminate\Contracts\Auth\Authenticatable;
-use League\Fractal\Resource\Item;
-use League\Fractal\TransformerAbstract as SpatieTransformer;
-use League\Fractal\Resource\Collection;
+namespace Kaum\Harreek\Abstracts\Transformers;
 
-class BaseTransformer extends SpatieTransformer
+use Illuminate\Contracts\Auth\Authenticatable;
+use League\Fractal\TransformerAbstract as SpatieTransformer;
+
+abstract class BaseTransformer extends SpatieTransformer
 {
     /**
      * The Authenticated User

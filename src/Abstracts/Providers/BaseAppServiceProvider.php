@@ -1,9 +1,10 @@
 <?php
 
+namespace Kaum\Harreek\Abstracts\Providers;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
-class ServiceProvider extends LaravelServiceProvider
+abstract class BaseAppServiceProvider extends LaravelServiceProvider
 {
     public function boot(): void {
         // Nothing
