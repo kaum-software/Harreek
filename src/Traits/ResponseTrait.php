@@ -2,6 +2,7 @@
 namespace Kaum\Harreek\Traits;
 
 use Illuminate\Http\JsonResponse;
+use Kaum\Harreek\Abstracts\Transformers\BaseTransformer;
 use Request;
 use Illuminate\Pagination\AbstractPaginator;
 use Illuminate\Support\Collection;
@@ -22,10 +23,10 @@ trait ResponseTrait
      * @return array
      */
     public function transform($data, $transformerInstance = null, $includes = [], $meta = [], $resourceKey = null): array {
-        if ($transformerInstance instanceof \BaseTransformer) {
+        if ($transformerInstance instanceof BaseTransformer) {
             $transformer =  $transformerInstance;
         } else {
-            $transformer = new \BaseTransformer();
+            $transformer = new BaseTransformer();
         }
 
         $this->metaData = [
